@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-03T07:39:12-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">From Genes to Gadgets - Exploring the Intersection of Tech and Humanity</title><subtitle>Get ready for a wild ride! We&apos;ll be diving into the world of software, taking a trip down memory lane with  retro-computing, and getting our hands dirty with electronics. But that&apos;s not all! We&apos;ll use bioinformatics to explore  our ancestry and optimize our health through fitness and longevity research. Buckle up and explore the exciting  intersection of technology and the human experience.</subtitle><entry><title type="html">StarFive VisionFive 2 - Updating to Boot from NVMe</title><link href="http://localhost:4000/visionfive%202/single%20board%20computers/2024/05/03/starfive-visionfive-2-updating-an-older-board.html" rel="alternate" type="text/html" title="StarFive VisionFive 2 - Updating to Boot from NVMe" /><published>2024-05-03T06:12:45-05:00</published><updated>2024-05-03T06:12:45-05:00</updated><id>http://localhost:4000/visionfive%202/single%20board%20computers/2024/05/03/starfive-visionfive-2-updating-an-older-board</id><content type="html" xml:base="http://localhost:4000/visionfive%202/single%20board%20computers/2024/05/03/starfive-visionfive-2-updating-an-older-board.html"><![CDATA[<h2 id="introduction">Introduction:</h2>
+<p>I bought my StarFive VisionFive 2 early last year to tinker with some actual hardware and build a basic OS. However, 
+like many projects, it got shelved for other priorities. Now, a year later, there have been several firmware updates, 
+including the exciting ability to boot from an NVMe drive into StarFive’s Debian image.</p>
+
+<h2 id="the-update-process">The Update Process:</h2>
+<p>My first step was to download the latest Debian image from the <a href="https://debian.starfivetech.com/">official StarFive website</a>. 
+After flashing the image to the NVMe drive using BalenaEtcher and installing it in the VisionFive 2, I encountered an 
+immediate hurdle: the board remained stuck at the splash screen and wouldn’t boot.
+Thankfully, a quick web search led me to a helpful blog post by <a href="https://jamesachambers.com/starfive-visionfive-2-firmware-update-guide/">James Chambers</a>. 
+This guide provided a clear outline for installing the necessary files:</p>
+<ul>
+  <li>u-boot-spl.bin.normal.out</li>
+  <li>visionfive2_fw_payload.img</li>
+</ul>
+
+<p>Following the “Easy Way” instructions in the guide, I ran into another obstacle. Apparently, the image sizes had changed
+over time, and they no longer fit within the /dev/mtd1 partition. After browsing through some threads on the StarFive 
+forums, I discovered that /dev/mtd2 was now the appropriate target for flashing.
+Here are the corrected commands for flashing the firmware:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>flashcp <span class="nt">-v</span> u-boot-spl.bin.normal.out /dev/mtd0
+<span class="nb">sudo </span>flashcp <span class="nt">-v</span> visionfive2_fw_payload.img /dev/mtd2</code></pre></figure>
+
+<h2 id="success-and-next-steps">Success and Next Steps:</h2>
+<p>With a successful flash operation, I removed the micro-SD card and restarted the system. This time, the board booted 
+flawlessly from the NVMe drive. For convenience, I simply installed gparted to resize the root partition and utilize the
+remaining free space on the drive.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user@starfive:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            3.2G     0  3.2G   0% /dev
+tmpfs           791M  3.4M  788M   1% /run
+/dev/nvme0n1p4  917G   11G  907G   2% /
+tmpfs           3.9G   36M  3.9G   1% /dev/shm
+tmpfs           5.0M   12K  5.0M   1% /run/lock
+tmpfs           791M  180K  791M   1% /run/user/1000
+</code></pre></div></div>
+
+<p>Now the board is prepped to start installing the development tool chains, which I will be using to re-introduce myself
+to systems level programming.</p>]]></content><author><name></name></author><category term="VisionFive 2" /><category term="Single Board Computers" /><summary type="html"><![CDATA[Introduction: I bought my StarFive VisionFive 2 early last year to tinker with some actual hardware and build a basic OS. However, like many projects, it got shelved for other priorities. Now, a year later, there have been several firmware updates, including the exciting ability to boot from an NVMe drive into StarFive’s Debian image.]]></summary></entry></feed>
