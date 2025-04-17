@@ -43,7 +43,7 @@ and update the results.  It should also be possible to build out refinements to 
 tree using consent from the users.
 
 And so this gives a high-level sketch of what my thoughts on the direction citizen science needs to head to truly leverage
-direct-2-consumer testing.  Any future system must democratize the compute, hosting and time costs especially as technologies
+direct-2-consumer testing.  Any future system must democratize the compute, hosting and time costs especially
 with PacBio HiFi where sequencing libraries measure around 0.5TB for a single individual.  Over the next few months I plan to
 detail more specific design here.  Then when it comes time to start coding set up a new public code repository on GitHub for
 any who might be interested in collaborating.
