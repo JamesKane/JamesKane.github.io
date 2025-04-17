@@ -28,7 +28,7 @@ Early citizen science opportunities on the web included [SETI@Home](https://arch
 client-application on their home computers.  Multiple users received the same units of work and the results were checked
 for consensus to ensure quality.  A large percentage of cost in time and money in the YDNA Warehouse is standardizing the
 inputs and computing matching.  Using secure computing enclaves that run on end-user PCs would allow their devices to
-exchange encrypted DNA attributes for to build the matching graphs.  The enclaves could also be hosted on traditional
+exchange encrypted DNA attributes to build the matching graphs.  The enclaves could also be hosted on traditional
 cloud-service providers when the user's computing device is a tablet or laptop.
 
 Recently [Bluesky](https://bsky.app) published a specification for [@ATProtocol](https://atproto.com).  The federated 
@@ -44,6 +44,6 @@ tree using consent from the users.
 
 And so this gives a high-level sketch of what my thoughts on the direction citizen science needs to head to truly leverage
 direct-2-consumer testing.  Any future system must democratize the compute, hosting and time costs especially as technologies
-like PacBio HiFi and sequencing libraries measuring in 0.5TB for a single individual.  Over the next few months I plan to
+like PacBio HiFi where sequencing libraries measure around 0.5TB for a single individual.  Over the next few months I plan to
 detail more specific design here.  Then when it comes time to start coding set up a new public code repository on GitHub for
 any who might be interested in collaborating.
