@@ -18,7 +18,7 @@ In light of current world uncertainties, I made the decision that combined risks
 very large hobby project with multiple terabytes of various storage classes in the cloud.  Therefore, the YDNA Warehouse
 will cease operations on 9-May-2025.  Once the current server goes dark, there will be no record of the user accounts anywhere.
 All data and backup images in Amazon Web Services, where the site is hosted, will be deleted.  The user contributed D2C
-BAM files will also be removed from my private cloud where the analysis pipelines are run.  Do to the nature of anonymized 
+BAM files will also be removed from my private cloud where the analysis pipelines are run.  Due to the nature of anonymized 
 data sharing Alex's site will still have copies of the files used in Big Tree.
 
 # Another Begins
