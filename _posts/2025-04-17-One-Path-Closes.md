@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "One Path Ends, Another Begins"
-date:   2025-04-17 12:00:00 -0500
+date:   2025-04-17 00:00:00 -0500
 categories: ["genomics"]
 tags: ["YDNA-Warehouse.org", "citizen science", "genetic genealogy"]
 ---
