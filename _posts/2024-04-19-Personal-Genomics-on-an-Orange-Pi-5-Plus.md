@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "One Path Ends, Another Begins"
+title:  "Personal Genomics on an Orange Pi 5 Plus"
 date:   2025-04-19 00:00:00 -0500
 categories: ["genomics"]
 tags: ["Orange Pi 5 Plus", "personal genomics"]
