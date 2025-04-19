@@ -23,6 +23,8 @@ The Orange Pi 5 Plus features the Rockchip RK35588.  The system on a chip provid
 
 Assembling the parts into the DVOZO case was quick, since the process boils down to inserting the NVME drive and installing the cooler.  Unfortunately the provided fan is obnoxiously loud by modern standards, but certainly quieter than a 1990s cooler used my [college days](https://jameskane.blog/retro-computing/2024/05/23/Amiga-500-Restoration-Project.html).
 
+![Assembled Orange Pi 5 in a DVOZO case](/assets/img/Orange-Pi-5.png)
+
 ## The Software
 All common bioinformatics software is built with POSIX platforms as a target, so we will be using Orange Pi’s [Official Debian Image](https://drive.google.com/drive/folders/1I_asEsyjMf_nixpymLdco7SCxr9AveYH).  The image was written to the Kingston NVME using an external dock from my laptop using balenaEtcher and resized the main root partition to use all available space after booting the board.
 
