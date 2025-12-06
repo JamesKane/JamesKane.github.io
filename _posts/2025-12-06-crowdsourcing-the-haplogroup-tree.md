@@ -80,7 +80,7 @@ This discovery system is our next major milestone after completing the MVP. The 
 
 What we're adding is the consensus engine—the piece that correlates discoveries across samples, proposes new branches, and enables curator oversight. It's a significant undertaking, touching the data model, the API layer, and eventually a curator dashboard for managing proposals.
 
-If you're interested in contributing—whether as an early tester, a domain expert, or a developer—I'd love to hear from you. The code is [open source](https://github.com/JamesKane/decodingus), and the [roadmap](https://github.com/JamesKane/decodingus/tree/main/documents/planning) is public.
+If you're interested in contributing—whether as an early tester, a domain expert, or a developer—I'd love to hear from you. The code is [open source](https://github.com/JamesKane/decodingus), and the [roadmap](https://github.com/JamesKane/decodingus/blob/main/documents/planning/post-mvp-roadmap.md) is public.
 
 More to come as we build it.
 
