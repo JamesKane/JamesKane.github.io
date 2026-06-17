@@ -122,7 +122,6 @@ The structural variant gap, though, widens. Short-read Delly falls from 26 perce
      Point: graph flat ~80% across both; Delly drops 26%->14% in segdups, so the graph's
      SV-sensitivity advantage widens (ratio ~3.1x on chr20 -> ~5.5x on chr16). -->
 
-
 ## What it adds up to
 
 Two chromosomes, deliberately the easiest and one of the hardest, tell the same story:
