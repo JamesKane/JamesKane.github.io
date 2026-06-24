@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Try It Yourself: A Pangenome Variant-Calling Bench"
-date:   2026-06-23 07:00:00 -0500
+date:   2026-06-23 07:00:00 -0600
 categories: ["genomics"]
 tags: ["human pangenome", "vg", "GATK", "delly", "sniffles", "bcftools", "tutorial", "reproducible"]
 excerpt: "The two previous posts made some claims about pangenomes. This one is the bench notes: every tool, every command, and every gotcha, so you can run the same experiments on your own data. It all runs locally on one workstation."
