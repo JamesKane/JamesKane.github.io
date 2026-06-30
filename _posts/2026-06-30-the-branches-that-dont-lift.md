@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Branches That Don't Lift: Why Some Clades Left the CHM13 Tree (For Now)"
-date:   2026-07-02 07:00:00 -0500
+date:   2026-06-30 07:00:00 -0500
 categories: ["genomics"]
 tags: ["Y-DNA", "haplogroup", "CHM13", "T2T", "liftover", "FTDNA", "pangenome", "decodingus", "coordinate integrity", "coalescence age", "callable loci"]
 excerpt: "Moving the Y-haplotree onto the T2T-CHM13 reference means giving every legacy SNP a new address. Most lift cleanly. But in the most repetitive stretch of the Y, some markers have no honest CHM13 coordinate at all, so the clades they define are removed and their children promoted. This is why, why it is the right call, and why a pangenome will eventually give those branches back."
