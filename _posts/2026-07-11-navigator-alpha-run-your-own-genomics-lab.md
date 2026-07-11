@@ -33,15 +33,24 @@ None of that stops you from bringing higher-grade calls to the table when you ha
 
 ## Installing it
 
-When the Alpha opens, the intended path for most people is the simplest one:
+For most people the intended path is the simplest one: **grab a prebuilt installer from [GitHub Releases](https://github.com/JamesKane/decodingus-navigator/releases/latest)**, download, install, and launch. The current Alpha build is **`v0.1.0-alpha.5`**, and there is a package for every common desktop:
 
-- **Prebuilt installers from GitHub Releases** for the common desktops: a `.dmg` for macOS, and packages for Windows and Linux. Download, install, launch. The macOS bundle has already been built and validated end to end, so this is the front door I expect most testers to use.
+| Platform | Download |
+| --- | --- |
+| macOS (Apple Silicon + Intel, universal) | [`DUNavigator_0.1.0_universal.dmg`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/DUNavigator_0.1.0_universal.dmg) |
+| Windows (x64) | [`navigator_0.1.0_x64-setup.exe`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_x64-setup.exe) |
+| Linux `.deb` (x86_64 / amd64) | [`navigator_0.1.0_amd64.deb`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_amd64.deb) |
+| Linux `.deb` (ARM64) | [`navigator_0.1.0_arm64.deb`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_arm64.deb) |
+| Linux AppImage (x86_64) | [`navigator_0.1.0_x86_64.AppImage`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_x86_64.AppImage) |
+| Linux AppImage (ARM64 / aarch64) | [`navigator_0.1.0_aarch64.AppImage`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_aarch64.AppImage) |
+
+The macOS bundle is a signed, notarized universal `.dmg` that runs natively on both Apple Silicon and Intel, and it has been built and validated end to end, so that is the front door I expect most macOS testers to use. On Linux, take the `.deb` if you are on a Debian/Ubuntu-family distribution and the AppImage if you would rather have a single self-contained executable. Each release also ships a [`SHA256SUMS`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/SHA256SUMS) file if you want to verify your download. Because these are Alpha builds, newer tags will land as bugs get fixed; the [latest release page](https://github.com/JamesKane/decodingus-navigator/releases/latest) always points at the freshest packages.
 
 Because the whole thing is one Rust binary with no external tools, **building from source is genuinely easy**, and that is the path if you are on a platform I do not ship a prebuilt installer for. FreeBSD is the obvious one, but the same applies to less common Linux setups or anyone who simply prefers to build their own:
 
 ```bash
-git clone https://github.com/decodingus/decodingus
-cd decodingus
+git clone https://github.com/JamesKane/decodingus-navigator
+cd decodingus-navigator
 cargo build --release
 ```
 
@@ -86,8 +95,8 @@ The current focus is **fixing bugs and polishing the experience.** The analysis 
 
 The bigger systems I have written about are deliberately **not** in this release. The [re-alignment engine](/genomics/2026/06/16/what-a-pangenome-misses-and-what-it-nails.html) that reprocesses old alignments onto the modern T2T reference, and the [SETI@home-style compute grid](/genomics/2026/07/06/folding-at-home-for-the-family-tree.html) that would let volunteers reprocess public genomes overnight: those are specified and their foundations are built, but they come in later releases. This Alpha is about getting the thing in your hands solid first: one person, one machine, one file, results you can trust. The distributed future is more fun to write about, but it is worth nothing if the everyday experience is not dependable, and dependable is what this phase is for.
 
-If you want to be part of that, get the installer when it lands, point it at a file, and tell me what breaks.
+If you want to be part of that, [grab the installer](https://github.com/JamesKane/decodingus-navigator/releases/latest), point it at a file, and tell me what breaks.
 
 ---
 
-*For technical details, visit [decoding-us.com](https://decoding-us.com/) or check out the [source code](https://github.com/decodingus/decodingus).*
+*For technical details, visit [decoding-us.com](https://decoding-us.com/) or check out the [source code](https://github.com/JamesKane/decodingus-navigator).*
