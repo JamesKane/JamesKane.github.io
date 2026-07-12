@@ -33,18 +33,18 @@ None of that stops you from bringing higher-grade calls to the table when you ha
 
 ## Installing it
 
-For most people the intended path is the simplest one: **grab a prebuilt installer from [GitHub Releases](https://github.com/JamesKane/decodingus-navigator/releases/latest)**, download, install, and launch. The current Alpha build is **`v0.1.0-alpha.5`**, and there is a package for every common desktop:
+For most people the intended path is the simplest one: **grab a prebuilt installer from [GitHub Releases](https://github.com/JamesKane/decodingus-navigator/releases/latest)**, download, install, and launch. The current Alpha build is **`v0.1.0-alpha.7 `**, and there is a package for every common desktop:
 
 | Platform | Download |
 | --- | --- |
-| macOS (Apple Silicon + Intel, universal) | [`DUNavigator_0.1.0_universal.dmg`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/DUNavigator_0.1.0_universal.dmg) |
-| Windows (x64) | [`navigator_0.1.0_x64-setup.exe`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_x64-setup.exe) |
-| Linux `.deb` (x86_64 / amd64) | [`navigator_0.1.0_amd64.deb`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_amd64.deb) |
-| Linux `.deb` (ARM64) | [`navigator_0.1.0_arm64.deb`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_arm64.deb) |
-| Linux AppImage (x86_64) | [`navigator_0.1.0_x86_64.AppImage`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_x86_64.AppImage) |
-| Linux AppImage (ARM64 / aarch64) | [`navigator_0.1.0_aarch64.AppImage`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/navigator_0.1.0_aarch64.AppImage) |
+| macOS (Apple Silicon + Intel, universal) | [`DUNavigator_0.1.0_universal.dmg`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.7 /DUNavigator_0.1.0_universal.dmg) |
+| Windows (x64) | [`navigator_0.1.0_x64-setup.exe`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.7 /navigator_0.1.0_x64-setup.exe) |
+| Linux `.deb` (x86_64 / amd64) | [`navigator_0.1.0_amd64.deb`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.7 /navigator_0.1.0_amd64.deb) |
+| Linux `.deb` (ARM64) | [`navigator_0.1.0_arm64.deb`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.7 /navigator_0.1.0_arm64.deb) |
+| Linux AppImage (x86_64) | [`navigator_0.1.0_x86_64.AppImage`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.7 /navigator_0.1.0_x86_64.AppImage) |
+| Linux AppImage (ARM64 / aarch64) | [`navigator_0.1.0_aarch64.AppImage`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.7 /navigator_0.1.0_aarch64.AppImage) |
 
-The macOS bundle is a signed, notarized universal `.dmg` that runs natively on both Apple Silicon and Intel, and it has been built and validated end to end, so that is the front door I expect most macOS testers to use. On Linux, take the `.deb` if you are on a Debian/Ubuntu-family distribution and the AppImage if you would rather have a single self-contained executable. Each release also ships a [`SHA256SUMS`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.5/SHA256SUMS) file if you want to verify your download. Because these are Alpha builds, newer tags will land as bugs get fixed; the [latest release page](https://github.com/JamesKane/decodingus-navigator/releases/latest) always points at the freshest packages.
+The macOS bundle is a signed, notarized universal `.dmg` that runs natively on both Apple Silicon and Intel, and it has been built and validated end to end, so that is the front door I expect most macOS testers to use. On Linux, take the `.deb` if you are on a Debian/Ubuntu-family distribution and the AppImage if you would rather have a single self-contained executable. Each release also ships a [`SHA256SUMS`](https://github.com/JamesKane/decodingus-navigator/releases/download/v0.1.0-alpha.7 /SHA256SUMS) file if you want to verify your download. Because these are Alpha builds, newer tags will land as bugs get fixed; the [latest release page](https://github.com/JamesKane/decodingus-navigator/releases/latest) always points at the freshest packages.
 
 Because the whole thing is one Rust binary with no external tools, **building from source is genuinely easy**, and that is the path if you are on a platform I do not ship a prebuilt installer for. FreeBSD is the obvious one, but the same applies to less common Linux setups or anyone who simply prefers to build their own:
 
@@ -61,6 +61,8 @@ Run the binary with no arguments and you get the desktop app. Run it with a subc
 ## The first run: one sample, done for you
 
 The default experience is deliberately boring in the best way. You have one DNA file. You bring it in, Navigator detects what it is, and runs only the analysis that file can actually support. What you see is scoped to what your test measured. A whole-genome BAM has the coverage for the full picture: Y haplogroup and the path to it, mitochondrial haplogroup, coverage, an ancestry breakdown. A targeted test gives you the part it covers and nothing it cannot honestly produce. A FTDNA Big Y is a Y-only test, so it gets a Y haplogroup placement and Y coverage, and Navigator does not invent an mtDNA or ancestry result it has no data for. A mitochondrial FASTA gives you your mtDNA haplogroup and its mutations. A consumer chip export gives you the ancestry and the low-resolution haplogroup calls the chip can support. You do not have to know what a callable region is or which reference build your test used, and you are never shown a result the file could not back up. That is the single-sample path, and for most people it is the entire app. Bring a file, read your results.
+
+If you want the full walkthrough, the [**Navigator User Guide**](https://github.com/JamesKane/decodingus-navigator/blob/main/USER_GUIDE.md) covers every feature in depth: importing each supported file type, the project-import batch and sidecar fast path, what each analysis produces, exporting reports, the CLI, and bringing your own reference genomes. This post is the tour; the guide is the manual.
 
 ## One person, many tests: the progressive consensus genome
 
@@ -99,4 +101,4 @@ If you want to be part of that, [grab the installer](https://github.com/JamesKan
 
 ---
 
-*For technical details, visit [decoding-us.com](https://decoding-us.com/) or check out the [source code](https://github.com/JamesKane/decodingus-navigator).*
+*For technical details, visit [decoding-us.com](https://decoding-us.com/), read the [User Guide](https://github.com/JamesKane/decodingus-navigator/blob/main/USER_GUIDE.md), or check out the [source code](https://github.com/JamesKane/decodingus-navigator).*
